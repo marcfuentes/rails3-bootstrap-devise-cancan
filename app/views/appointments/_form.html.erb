@@ -1,0 +1,17 @@
+<%= simple_form_for(@appointment) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :id %>
+    <%= f.input :integer %>
+    <%= f.input :empresa_id %>
+    <%= f.input :integer %>
+    <%= f.input :user_id %>
+    <%= f.input :appointment_date %>
+    <%= f.input :datetime %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

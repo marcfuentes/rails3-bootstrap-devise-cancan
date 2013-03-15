@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class User < ActiveRecord::Base
   rolify
   # Include default devise modules. Others available are:
@@ -10,4 +11,7 @@ class User < ActiveRecord::Base
   attr_accessible :role_ids, :as => :admin
   attr_accessible :name, :email, :password, :password_confirmation, :remember_me
   
+  has_many :appointments
+  has_many :empresas, :through => :appointments
+ 
 end
